@@ -91,7 +91,7 @@ import LogoOpenai from '@/assets/openai-logo.svg';
 import { ChatgptTokenTutorialUrl } from '@/constants/index';
 import { useUserStore } from '@/store';
 import { LinkJual } from '@/constants/index';
-import { Credit } from '@/constants/index';
+import { Creditz } from '@/constants/index';
 
 const userStore = useUserStore();
 const loading = ref(false);
