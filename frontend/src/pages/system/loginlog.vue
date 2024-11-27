@@ -46,8 +46,8 @@ const pagination = {
 const tableLoading = ref(false);
 const tableData = ref<TableData[]>([]);
 const columns: TableProps['columns'] = [
-  { colKey: 'username', title: 'username', width: 200 },
-  { colKey: 'chatgpt_username', title: 'ChatGPT', width: 200 },
+  { colKey: 'username', title: 'Username', width: 200 },
+  { colKey: 'chatgpt_username', title: 'ChatGPT Username', width: 200 },
   { colKey: 'ip', title: 'IP', width: 200 },
   // { colKey: 'country', title: 'Negara/Wilayah', width: 100 },
   { colKey: 'log_type', title: 'Operation Type', width: 200 },

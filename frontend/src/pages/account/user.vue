@@ -5,7 +5,7 @@
       <t-row justify="space-between">
         <div class="left-operation-container">
           <!-- <t-button @click="$router.push('/login')">Akses</t-button> -->
-          <t-button @click="handleShowDialog()">Berhasil Ditambahkan</t-button>
+          <t-button @click="handleShowDialog()">Tambah User</t-button>
           <t-button
             variant="base"
             :loading="loading"
@@ -13,7 +13,7 @@
             :disabled="!selectedRowKeys.length"
             @click="BatcModelLimit"
           >
-            Batasi</t-button
+            Limit</t-button
           >
           <p v-if="!!selectedRowKeys.length" class="selected-count">
             {{ $t('pages.listBase.select') }} {{ selectedRowKeys.length }} {{ $t('pages.listBase.items') }}
@@ -46,7 +46,7 @@
         </template>
 
         <template #chatgpt_count="{ row }">
-          <t-link theme="primary" @click="getChatGPTDetails(row)">Bound : {{ row.chatgpt_count }} 个</t-link>
+          <t-link theme="primary" @click="getChatGPTDetails(row)">Terhubung : {{ row.chatgpt_count }} Akun</t-link>
         </template>
 
         <template #isolated_session="{ row }">
@@ -160,7 +160,7 @@
                         <t-input-number v-model="line.every_minute" theme="normal" min="0" style="width: 70px" />
                       </t-input-adornment>
                       <span>Kirim</span>
-                      <t-input-adornment append="Strip">
+                      <t-input-adornment append="Kali">
                         <t-input-number v-model="line.limit_count" theme="normal" min="0" style="width: 70px" />
                       </t-input-adornment>
                       <span>Informasi</span>
@@ -238,7 +238,7 @@
                         <t-input-number v-model="line.every_minute" theme="normal" min="0" style="width: 70px" />
                       </t-input-adornment>
                       <span>Kirim</span>
-                      <t-input-adornment append="Strip">
+                      <t-input-adornment append="Kali">
                         <t-input-number v-model="line.limit_count" theme="normal" min="0" style="width: 70px" />
                       </t-input-adornment>
                       <span>Informasi</span>
@@ -350,7 +350,7 @@ const onSelectChange: TableProps['onSelectChange'] = (value, _) => {
 
 const columns: TableProps['columns'] = [
   { colKey: 'row-select', type: 'multiple', checkProps: ({ row }) => ({ disabled: row.username === 'free_account' }) },
-  { colKey: 'is_active', title: 'Negara', width: 100 },
+  { colKey: 'is_active', title: 'State', width: 100 },
   { colKey: 'username', title: 'title-username', width: 200, fixed: 'left' },
   { colKey: 'isolated_session', title: 'Isolated Session', width: 100 },
   { colKey: 'chatgpt_count', title: 'ChatGPT', width: 120 },
@@ -371,7 +371,7 @@ const modelLimitValidator: CustomValidator = (val) => {
       return { result: false, message: 'Batas per menit harus lebih besar dari 0', type: 'error' };
     }
     if (!item.limit_count || item.limit_count <= 0) {
-      return { result: false, message: 'Jumlah item yang dikirim harus lebih besar dari 0', type: 'error' };
+      return { result: false, message: 'Jumlah waktu limit harus lebih besar dari 0', type: 'error' };
     }
   }
 

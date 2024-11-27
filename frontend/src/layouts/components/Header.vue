@@ -20,8 +20,7 @@
           <!-- 搜索框 -->
           <!-- <search v-if="layout !== 'side'" :layout="layout" /> -->
 
-          <!-- 全局通知 -->
-          <notice />
+          <!-- <notice /> -->
 
           <t-tooltip placement="bottom" :content="$t('layout.header.code')">
             <t-button theme="default" shape="square" variant="text" @click="navToGitHub">

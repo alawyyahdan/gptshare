@@ -3,7 +3,7 @@
     <t-card class="list-card-container">
       <t-row justify="space-between">
         <div class="left-operation-container">
-          <t-button @click="showDialog = true">Masuk</t-button>
+          <t-button @click="showDialog = true">Tambah Akun</t-button>
 
           <p v-if="!!selectedRowKeys.length" class="selected-count">
             {{ $t('pages.listBase.select') }} {{ selectedRowKeys.length }} {{ $t('pages.listBase.items') }}
@@ -155,7 +155,7 @@ const columns: TableProps['columns'] = [
   { colKey: 'row-select', type: 'multiple' },
   { colKey: 'id', title: 'ID', width: 50 },
   { colKey: 'chatgpt_username', title: 'Akun ChatGPT', width: 220, fixed: 'left' },
-  { colKey: 'auth_status', title: 'Negara', width: 100, fixed: 'left' },
+  { colKey: 'auth_status', title: 'State', width: 100, fixed: 'left' },
   { colKey: 'plan_type', title: 'Jenis', width: 100 },
   // { colKey: 'use_count', title: 'Recent usage', width: 350 },
   { colKey: 'access_token_exp', title: 'Access Token Expire Date', width: 200 },

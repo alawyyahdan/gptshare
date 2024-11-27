@@ -3,7 +3,7 @@
     <t-card class="list-card-container">
       <t-row justify="space-between">
         <div class="left-operation-container">
-          <t-button @click="handleShowDialog()">Added</t-button>
+          <t-button @click="handleShowDialog()">Add Pool</t-button>
         </div>
       </t-row>
 
@@ -56,7 +56,7 @@
           :label-width="120"
           @submit="handleAdd"
         >
-          <t-form-item label="Number pool name" name="car_name">
+          <t-form-item label="Pool name" name="car_name">
             <t-input v-model="newGptCar.car_name" :disabled="actionType == 'edit'" style="width: 240px"></t-input>
           </t-form-item>
 
@@ -88,7 +88,7 @@
       <!-- 确认删除 dialog -->
       <t-dialog
         v-model:visible="dialogVisibleDelete"
-        header="Apakah Anda yakin akan menghapus number pool ini?"
+        header="Apakah Anda yakin akan menghapus pool ini?"
         width="600"
         :on-confirm="handleDelete"
       >

@@ -36,7 +36,7 @@
         <t-loading :loading="loading">
           <t-form :data="loginForm" :label-width="0" :rules="rules" ref="loginFormRef" @submit="onSubmit">
             <t-form-item name="username">
-              <t-input v-model="loginForm.username" placeholder="Nama Belakang"></t-input>
+              <t-input v-model="loginForm.username" placeholder="Username"></t-input>
             </t-form-item>
             <t-form-item name="password">
               <t-input v-model="loginForm.password" type="password" autocomplete="on" placeholder="Password"></t-input>
@@ -68,12 +68,12 @@
         </t-loading>
         <div style="text-align: center; margin-top: 15px">
           <div v-if="IsRegister">
-            Sudah punya akun? <t-link :underline="false" href="/admin/#/login" style="color: #10a37f">Masuk</t-link> or
+            Sudah punya akun? <t-link :underline="false" href="/admin/#/login" style="color: #10a37f">Masuk</t-link> atau
             <t-link :underline="false" style="color: red" @click="goFree">Uji coba gratis</t-link>
           </div>
           <div v-else>
             Belum punya akun?
-            <t-link :underline="false" href="/admin/#/register" style="color: #10a37f">Daftar</t-link> or
+            <t-link :underline="false" href="/admin/#/register" style="color: #10a37f">Daftar</t-link> atau
             <t-link :underline="false" style="color: red" @click="goFree">Uji coba gratis</t-link>
           </div>
         </div>

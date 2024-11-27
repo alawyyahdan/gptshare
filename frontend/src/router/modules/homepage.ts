@@ -49,7 +49,7 @@ export default [
         component: () => import('@/pages/account/gptcar.vue'),
         meta: {
           title: {
-            zh_CN: 'Gpt Pool',
+            zh_CN: 'GPT Pool',
             en_US: 'gpt pool',
           },
         },
